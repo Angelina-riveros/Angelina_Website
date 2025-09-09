@@ -4,13 +4,13 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: roboto;
-    color: black;
-    background-color: white;
+    color: #504a38;
+    background-color: rgb(150, 167, 143);
   }  
 
 .hero-image {
 /* This selector controls the "hero image" class. You may need to change "hero.jpg" name/format to match your asset, or vice-versa */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Kitchen.jpg");
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -48,7 +48,7 @@ body, html {
     width: 55%;
     background-color: inherit;
     padding: 0px;
-    border: 0px solid black;
+    border: 0px solid #385041;
     margin-top: 100px;
     margin-bottom: 100px;
     margin-left: auto;
@@ -65,7 +65,7 @@ body, html {
         width: 90%;
         background-color: inherit;
         padding: 0px;
-        border: 0px solid black;
+        border: 0px solid #385041;
         margin-top: 100px;
         margin-bottom: 100px;
         margin-left: auto;
@@ -339,7 +339,7 @@ Logo width controlled inline */
 .logo {
     display: block;
     padding: 10px;
-    border: 0px solid black;
+    border: 0px solid #385041;
     margin-top: 200px;
     margin-bottom: 0px;
     margin-left: auto;
@@ -360,3 +360,109 @@ Add a Copyright */
     font-size: inherit;
     text-align: center;    
   }
+
+  /* ...existing code... */
+
+/* Timer Container Styling */
+.timer-container {
+  background: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(42, 93, 176, 0.15);
+  padding: 32px 28px;
+  max-width: 500px;
+  margin: 32px auto;
+  text-align: center;
+}
+
+/* Timer Display Styling */
+.pretty-timer {
+  font-family: 'Roboto', monospace;
+  font-size: 3em;
+  letter-spacing: 0.1em;
+  color: #385041;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 0;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(42, 93, 176, 0.08);
+}
+
+.timer-input {
+  font-size: 1.2em;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #385041;
+  margin-right: 12px;
+  width: 120px;
+  box-sizing: border-box;
+}
+
+/* Timer Button Styling */
+.timer-btn {
+  background-color: #ac8b4d;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 4px;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+
+.timer-btn:hover {
+  background-color: #385041;
+}
+
+@keyframes shake {
+  0% { transform: translate(0px, 0px) rotate(0deg);}
+  20% { transform: translate(-5px, 2px) rotate(-2deg);}
+  40% { transform: translate(5px, -2px) rotate(2deg);}
+  60% { transform: translate(-5px, 2px) rotate(-2deg);}
+  80% { transform: translate(5px, -2px) rotate(2deg);}
+  100% { transform: translate(0px, 0px) rotate(0deg);}
+}
+
+.shake {
+  animation: shake 0.5s infinite;
+}
+
+.steam-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  display: none;
+}
+
+.steam-container.active-steam {
+  display: block;
+}
+
+.steam {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(220,220,220,0.7) 60%, transparent 100%);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: puff 2s infinite;
+  pointer-events: none;
+}
+
+.puff1 { animation-delay: 0s; }
+.puff2 { left: 60%; top: -60px; animation-delay: 0.5s; }
+.puff3 { left: 50%; top: -80px; animation-delay: 1s; }
+
+@keyframes puff {
+  0% { transform: scale(0.8) translateY(0); opacity: 0.7; }
+  50% { transform: scale(1.2) translateY(-20px); opacity: 0.5; }
+  100% { transform: scale(1.5) translateY(-40px); opacity: 0; }
+}
+.treatImg {
+  display: none;
+  max-width: 30%;
+  margin: 8px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
